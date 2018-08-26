@@ -26,10 +26,15 @@ PACKAGE_VERSION=$(cat Dockerfile \
  )
 
 docker build -t klimby/e-postgres:$PACKAGE_VERSION -t klimby/e-postgres:latest .
-    docker push klimby/e-postgres:$PACKAGE_VERSION
-    docker push klimby/e-postgres:latest
-    rm *.tar
-    docker save klimby/e-postgres:$PACKAGE_VERSION klimby/e-postgres:latest > e-postgres.$PACKAGE_VERSION.tar
-    ls -sh e-postgres.$PACKAGE_VERSION.tar
-    git tag -a $PACKAGE_VERSION -m "version $PACKAGE_VERSION"
-    git commit -m "Version $PACKAGE_VERSION docker complete"
+
+docker push klimby/e-postgres:$PACKAGE_VERSION
+
+docker push klimby/e-postgres:latest
+
+rm *.tar
+
+docker save klimby/e-postgres:$PACKAGE_VERSION klimby/e-postgres:latest > e-postgres.$PACKAGE_VERSION.tar
+
+git tag -a $PACKAGE_VERSION -m "version $PACKAGE_VERSION"
+
+ls -sh e-postgres.$PACKAGE_VERSION.tar
