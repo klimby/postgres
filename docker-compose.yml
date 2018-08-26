@@ -1,0 +1,25 @@
+version: '3.2'
+
+services:
+
+  pg:
+    container_name: pg
+    build:
+      context: .
+    volumes:
+#      - ./db:/var/lib/postgresql/data
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
+    command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
+    ports:
+    - "54321:5432"
+    environment:
+     - POSTGRES_DB=asd
+     - POSTGRES_USER=asd
+     - POSTGRES_PASSWORD=asd
+     - LANG=ru_RU.UTF-8
+
+
+
+
+
+
