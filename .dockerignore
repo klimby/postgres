@@ -2,3 +2,8 @@
 /.idea
 .env
 *.tar
+/.git
+build.sh
+enter.sh
+*.yml
+/db
