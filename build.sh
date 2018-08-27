@@ -31,9 +31,10 @@ docker push klimby/e-postgres:$PACKAGE_VERSION
 
 docker push klimby/e-postgres:latest
 
-rm *.tar
+# rm *.tar
 
-docker save klimby/e-postgres:$PACKAGE_VERSION klimby/e-postgres:latest > e-postgres.$PACKAGE_VERSION.tar
+# docker save klimby/e-postgres:$PACKAGE_VERSION klimby/e-postgres:latest > e-postgres.$PACKAGE_VERSION.tar
+# docker save klimby/e-postgres:$PACKAGE_VERSION klimby/e-postgres:latest > e-postgres.tar
 
 git tag -a $PACKAGE_VERSION -m "version $PACKAGE_VERSION"
 
