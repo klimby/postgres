@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-sudo docker exec -i -t  pg /bin/sh
+sudo docker exec -i -t  e-postgres-test /bin/sh

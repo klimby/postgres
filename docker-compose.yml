@@ -2,12 +2,12 @@ version: '3.2'
 
 services:
 
-  e-postgres:
-    container_name: e-postgres
+  e-postgres-test:
+    container_name: e-postgres-test
     build:
       context: .
     volumes:
-      - ./db:/var/lib/postgresql/data
+#      - ./db:/var/lib/postgresql/data
       - ./postgresql.conf:/etc/postgresql/postgresql.conf
     command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
     ports:

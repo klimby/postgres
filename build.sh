@@ -38,4 +38,4 @@ docker push klimby/e-postgres:latest
 
 git tag -a $PACKAGE_VERSION -m "version $PACKAGE_VERSION"
 
-ls -sh e-postgres.$PACKAGE_VERSION.tar
+# ls -sh e-postgres.$PACKAGE_VERSION.tar
