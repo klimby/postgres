@@ -1,10 +1,11 @@
 {
   "name": "e-postgres",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "PostgreSQL 10.5",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "standard-version",
+    "patch": "standard-version -- --release-as patch"
   },
   "repository": {
     "type": "git",
