@@ -7,3 +7,4 @@ build.sh
 enter.sh
 *.yml
 /db
+/node_modules/

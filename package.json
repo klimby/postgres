@@ -1,0 +1,27 @@
+{
+  "name": "e-postgres",
+  "version": "1.0.0",
+  "description": "PostgreSQL 10.5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klimby/e-postgres.git"
+  },
+  "keywords": [
+    "PostgreSQL",
+    "Docker",
+    "eks"
+  ],
+  "author": "Alexander Klimov <klim.by.0@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klimby/e-postgres/issues"
+  },
+  "homepage": "https://github.com/klimby/e-postgres#readme",
+  "devDependencies": {
+    "standard-version": "^4.4.0"
+  }
+}
