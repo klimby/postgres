@@ -14,7 +14,7 @@ docker_bin := $(shell command -v docker 2> /dev/null)
 
 docker_compose_bin := $(shell command -v docker-compose 2> /dev/null)
 
-PACKAGE_VERSION := $(shell git describe --tags $(git rev-list --tags --max-count=1))
+PACKAGE_VERSION := $(shell git describe --tags $$(git rev-list --tags --max-count=1))
 
 CONTAINER_NAME := e-postgres
 
@@ -41,3 +41,8 @@ create: info## Создать
 
 info: ## Версия
 	@printf "%b" "$(COM_COLOR)\nВерсия $(PACKAGE_VERSION)\n$(NO_COLOR)"
+
+readme: info ## Актуализация Read.me
+	@sed -i "s#\[Version v.*\]#[Version $(PACKAGE_VERSION)]#g" ./README.md;
+	@sed -i 's#\"Version v.*\"#"Version $(PACKAGE_VERSION)"#g' ./README.md;
+	@sed -i 's#version-v.*-blue#version-$(PACKAGE_VERSION)-blue#g' ./README.md;
