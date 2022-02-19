@@ -11,7 +11,7 @@ PREFIX := klimby
 
 .DEFAULT_GOAL := help
 
-.PHONY: help build pull create
+.PHONY: help build push create up down
 
 --------------------: ## --------------------
 
@@ -28,7 +28,7 @@ push: ## Send to docker hub
 	$(docker_bin) push $(PREFIX)/postgres:latest
 
 create: ## Create image
-	$(docker_bin) build --label version=14 -t $(PREFIX)/postgres:14 -t $(PREFIX)/postgres:latest .
+	$(docker_bin) build -t $(PREFIX)/postgres:14 -t $(PREFIX)/postgres:latest .
 
 --------------------: ## --------------------
 
@@ -37,3 +37,6 @@ up: ## Start test compose
 
 down: ## Stop test compose, delete db data
 	@$(docker_bin) compose -f ./docker-pg-test/docker-compose.yml down -v
+
+enter: ## Enter in container
+	@$(docker_bin)  exec -i -t  postgres-test /bin/bash

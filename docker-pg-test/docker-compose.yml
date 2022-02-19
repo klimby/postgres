@@ -6,13 +6,9 @@ networks:
 
 services:
 
-  #
-  # The main container datserver. Runs php-fpm
-  # Serves as a template for queue containers and scheduler
-  #
   &postgres postgres:
     image: klimby/postgres:latest
-    container_name: postgres
+    container_name: postgres-test
     hostname: *postgres
     ports: ["54330:5432"]
     environment:
