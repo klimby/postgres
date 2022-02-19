@@ -33,7 +33,7 @@ create: ## Create image
 --------------------: ## --------------------
 
 up: ## Start test compose
-	@$(docker_bin) compose -f ./docker/docker-compose.yml up
+	@$(docker_bin) compose -f ./docker-pg-test/docker-compose.yml up
 
 down: ## Stop test compose, delete db data
-	@$(docker_bin) compose -f ./docker/docker-compose.yml down -v
+	@$(docker_bin) compose -f ./docker-pg-test/docker-compose.yml down -v

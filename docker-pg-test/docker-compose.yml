@@ -1,0 +1,35 @@
+version: '3.4'
+
+networks:
+  pg:
+    driver: bridge
+
+services:
+
+  #
+  # The main container datserver. Runs php-fpm
+  # Serves as a template for queue containers and scheduler
+  #
+  &postgres postgres:
+    image: klimby/postgres:latest
+    container_name: postgres
+    hostname: *postgres
+    ports: ["54330:5432"]
+    environment:
+      - POSTGRES_DB=test
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - LANG=ru_RU.UTF-8
+    command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
+    volumes:
+      - postgresql-test-data:/var/lib/postgresql/data
+      - ../conf/postgresql.conf:/etc/postgresql/postgresql.conf
+    networks:
+      - pg
+
+
+volumes:
+  postgresql-test-data:
+
+
+

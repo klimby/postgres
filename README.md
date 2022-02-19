@@ -4,7 +4,7 @@
 
 ![Docker 20.10](https://img.shields.io/badge/Docker-20.10-blue.svg?style=plastic "Docker 20.10")
 
-# postgres
+# PostgreSQL docker image
 
 ```
 git clone ssh://git@github.com/klimby/postgres.git
@@ -14,4 +14,6 @@ cd postgres
 npm install
 ```
 
-PostgreSQL docker image
+PostgreSQL docker image with ru locale.
+
+
