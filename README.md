@@ -2,7 +2,16 @@
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-![Docker 18.09](https://img.shields.io/badge/Docker-18.09-blue.svg?style=plastic "Docker 18.09")
+![Docker 20.10](https://img.shields.io/badge/Docker-20.10-blue.svg?style=plastic "Docker 20.10")
 
-# e-postgres
-PostgreSQL v10.5 docker image
+# postgres
+
+```
+git clone ssh://git@github.com/klimby/postgres.git
+
+cd postgres
+
+npm install
+```
+
+PostgreSQL docker image

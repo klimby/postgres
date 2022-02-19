@@ -1,11 +1,16 @@
 {
-  "name": "e-postgres",
+  "name": "postgres",
   "version": "1.1.0",
-  "description": "PostgreSQL 10.5",
+  "description": "PostgreSQL",
   "main": "index.js",
   "scripts": {
-    "release": "standard-version",
-    "patch": "standard-version -- --release-as patch"
+    "======= STANDARD VERSION SECTION =======": "",
+    "major": "standard-version --release-as major",
+    "major-dry": "standard-version --release-as major --dry-run",
+    "minor": "standard-version --release-as minor",
+    "minor-dry": "standard-version --release-as minor --dry-run",
+    "patch": "standard-version --release-as patch",
+    "patch-dry": "standard-version --release-as patch --dry-run"
   },
   "repository": {
     "type": "git",
@@ -23,6 +28,6 @@
   },
   "homepage": "https://github.com/klimby/e-postgres#readme",
   "devDependencies": {
-    "standard-version": "^4.4.0"
+    "standard-version": "^9.3.2"
   }
 }
