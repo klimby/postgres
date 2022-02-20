@@ -5,13 +5,11 @@ SHELL = /bin/sh
 
 docker_bin := $(shell command -v docker 2> /dev/null)
 
-CONTAINER_NAME := postgres
-
 PREFIX := klimby
 
 .DEFAULT_GOAL := help
 
-.PHONY: help build push create up down
+.PHONY: help build push create up down enter
 
 --------------------: ## --------------------
 

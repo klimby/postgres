@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klimby/e-postgres.git"
+    "url": "git+https://github.com/klimby/postgres.git"
   },
   "keywords": [
     "PostgreSQL",
@@ -24,9 +24,9 @@
   "author": "Alexander Klimov <klim.by.0@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/klimby/e-postgres/issues"
+    "url": "https://github.com/klimby/postgres/issues"
   },
-  "homepage": "https://github.com/klimby/e-postgres#readme",
+  "homepage": "https://github.com/klimby/postgres#readme",
   "devDependencies": {
     "standard-version": "^9.3.2"
   }
